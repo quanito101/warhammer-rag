@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q01",
+    "type": "rules_table",
+    "question": "What D6 result is needed to wound when the attack's Strength is twice the target's Toughness or more?",
+    "ground_truth": "A D6 result of 2+ is required.",
+    "source": "Core Rules p.21, Wound Roll table (chunk 1)"
+  },
+  {
+    "id": "q02",
+    "type": "rules_stratagem",
+    "question": "What does the Fire Overwatch stratagem do, and what does it cost?",
+    "ground_truth": "Fire Overwatch costs 1 CP. It is used in the opponent's Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back or Charge move. It targets one unit from your army within 24\" of that enemy unit that would be eligible to shoot in your Shooting phase, and that unit can shoot the enemy unit as if it were your Shooting phase. Each ranged attack only hits on an unmodified Hit roll of 6, and the stratagem can be used once per turn.",
+    "source": "Core Rules p.42, Fire Overwatch (chunk 14)"
+  },
+  {
+    "id": "q03",
+    "type": "rules_multi_chunk",
+    "question": "Can a unit shoot in the turn it Advanced?",
+    "ground_truth": "Generally no: units that Advance cannot shoot or charge this turn. The exception is a unit containing models with Assault weapons: it is still eligible to shoot in that Shooting phase, but can only resolve attacks with its Assault weapons.",
+    "source": "Core Rules p.14 (chunk 51) and p.25, Assault (chunk 97)"
+  },
+  {
+    "id": "q04",
+    "type": "rules_text",
+    "question": "What are the effects of a unit being Battle-shocked?",
+    "ground_truth": "The Objective Control characteristic of all its models is 0. If it Falls Back, a Desperate Escape test must be taken for every model in the unit. Its controlling player cannot use Stratagems to affect it. It stays Battle-shocked until the start of its controller's next Command phase.",
+    "source": "Core Rules p.11 (chunks 41, 42, 43)"
+  },
+  {
+    "id": "q05",
+    "type": "rules_text",
+    "question": "How many Command points do players gain in the Command phase, and can they gain more elsewhere?",
+    "ground_truth": "Both players gain 1 CP in the Command phase. Outside of the CP gained at the start of the Command phase, each player can only gain a total of 1 CP per battle round, regardless of the source.",
+    "source": "Core Rules p.11 (chunks 41, 43)"
+  },
+  {
+    "id": "q06",
+    "type": "rules_scoring",
+    "question": "How are Victory points scored in the Capture and Control mission?",
+    "ground_truth": "It is a Progressive Objective. Starting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores 1 Victory point for each objective marker they control, to a maximum of 3 VP per turn.",
+    "source": "Core Rules p.59 (chunk 197)"
+  },
+  {
+    "id": "q07",
+    "type": "sql",
+    "question": "What is the toughness of an Intercessor Squad?",
+    "ground_truth": "The toughness of an Intercessor Squad is 4.",
+    "source": "wahadb.sqlite, datasheets_models (Space Marines, Intercessor Squad)"
+  },
+  {
+    "id": "q08",
+    "type": "sql",
+    "question": "How many points does a 10-model Intercessor Squad cost?",
+    "ground_truth": "A 10-model Intercessor Squad costs 150 points (a 5-model squad costs 80 points).",
+    "source": "wahadb.sqlite, datasheets_models_cost"
+  },
+  {
+    "id": "q09",
+    "type": "hybrid",
+    "question": "What D6 roll does a Strength 8 weapon need to wound an Intercessor Squad?",
+    "ground_truth": "An Intercessor Squad has Toughness 4. Strength 8 is twice the Toughness, so the weapon wounds on a 2+.",
+    "source": "wahadb.sqlite (Toughness 4) and Core Rules p.21 (chunk 1)"
+  },
+  {
+    "id": "q10",
+    "type": "out_of_scope",
+    "question": "Which secondary objectives are available in the Leviathan mission pack?",
+    "ground_truth": "This cannot be answered from the available sources: the Core Rules and the unit database do not cover mission packs or secondary objectives. A faithful answer says so and does not invent any objectives.",
+    "source": "No source: absence checked in all 201 chunks"
+  }
+]

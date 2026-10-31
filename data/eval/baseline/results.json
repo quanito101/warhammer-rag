@@ -1,0 +1,258 @@
+[
+  {
+    "id": "q01",
+    "type": "rules_table",
+    "question": "What D6 result is needed to wound when the attack's Strength is twice the target's Toughness or more?",
+    "ground_truth": "A D6 result of 2+ is required.",
+    "answer": "When an attack's Strength is twice (or more than twice) the target's Toughness, a D6 result of **2+** is needed to successfully wound (Core Rules, page 21).",
+    "contexts": [
+      "[page 21, table] WOUND ROLL ATTACK'S STRENGTH VS TARGET'S TOUGHNESS | D6 RESULT REQUIRED\nStrength is TWICE (or more than twice) the Toughness. | 2+\nStrength is GREATER than the Toughness. | 3+\nStrength is EQUAL to the Toughness. | 4+\nStrength is LESS than the Toughness. | 5+\nStrength is HALF (or less than half) the Toughness. | 6+",
+      "[page 21, prose] ■  Hit Roll (Ranged Attack): A hit is scored if the D6 result equals or exceeds that attack's BS.\n\n■  Hit Roll (Melee Attack): A hit is scored if the D6 result equals or exceeds that attack's WS.\n\n Critical Hit: Unmodified Hit roll of 6. Always successful.\n\n■  A Hit roll can never be modified by more than -1 or +1.\n\n■ ■ An unmodified Hit roll of 1 always fails.\n\n2. WOUND ROLL\n\nEach time an attack scores a hit against a target unit, make a Wound roll for that attack by rolling one D6 to see if that attack successfully wounds the target unit. The result required is determined by comparing the attack's Strength (S) characteristic with the target's Toughness (T) characteristic, as shown below.",
+      "[page 24, prose] 1\n\n A unit of 20 Termagants targets a Terminators unit with their Fleshborers. As these weapons all have the same profile, the controlling player chooses to use the fast dice rolling method.\n\n2\n\n3\n\n4\n\n5\n\n6\n\n Each has an Attacks characteristic of 1, so the controlling player rolls twenty D6. Seven of the results are greater than or equal to the Fleshborers' Ballistic Skill of 4+, so seven hits are scored, and seven Wound rolls are then made.\n\n The Strength characteristic of those attacks is 5, which is equal to the Toughness of a Terminator, so rolls of 4+ are required to successfully wound the target. Of those seven rolls, five successfully wound.",
+      "[page 22, prose] If the result of the Wound roll is greater than or equal to the required number shown in the table opposite, then that Wound roll is successful and scores one wound against the target unit. Otherwise, the attack fails and the attack sequence ends.\n\nAn unmodified Wound roll of 6 is called a Critical Wound and is always successful. An unmodified Wound roll of 1 always fails. A Wound roll can never be modified by more than -1 or +1.\n\n■  Critical Wound: Unmodified Wound roll of 6. Always successful.\n\n■ An unmodified Wound roll of 1 always fails.\n\n■  A Wound roll can never be modified by more than -1 or +1.\n\n3. ALLOCATE ATTACK\n\nIf an attack successfully wounds the target unit, the player controlling the target unit allocates that attack to one model in the target unit, as follows.",
+      "[page 12, prose] BELOW HALF-STRENGTH\n\nSome rules will refer to a unit being Below Half-strength.\n\n■  If a unit has a Starting Strength of 1, then it is said to be Below Half-strength while its remaining number of wounds is less than half of its Wounds characteristic.\n\n■  For any other unit, while the number of models in that unit is less than half of its Starting Strength, that unit is said to be Below Half-strength.\n\nDESTROYED\n\nThroughout a battle, models will suffer damage and be destroyed. When a model is destroyed, it is removed from the battlefield. When every model in a unit has been destroyed, that unit is destroyed.\n\nATTACHED UNITS\n\nSome Character units have the Leader ability (pg 39), which lets them merge with other units (known as Bodyguard units) to form an Attached unit."
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "wound roll strength toughness twice",
+            "strength twice toughness wound roll chart",
+            "to wound strength vs toughness"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "type": "rules_stratagem",
+    "question": "What does the Fire Overwatch stratagem do, and what does it cost?",
+    "ground_truth": "Fire Overwatch costs 1 CP. It is used in the opponent's Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back or Charge move. It targets one unit from your army within 24\" of that enemy unit that would be eligible to shoot in your Shooting phase, and that unit can shoot the enemy unit as if it were your Shooting phase. Each ranged attack only hits on an unmodified Hit roll of 6, and the stratagem can be used once per turn.",
+    "answer": "Based on page 42 of the Core Rules, the **Fire Overwatch** stratagem details are as follows:\n\n* **Cost:** 1 CP (Command Point)\n* **Type:** Core – Strategic Ploy Stratagem\n\n### Details\n* **When:** Your opponent's Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back, or Charge move.\n* **Target:** One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.\n* **Effect:** Your unit can shoot that enemy unit as if it were your Shooting phase.\n* **Restrictions:** Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon's Ballistic Skill or any modifiers. You can only use this Stratagem once per turn.",
+    "contexts": [
+      "[page 42, stratagem] CORE - BATTLE TACTIC STRATAGEM\nSeeking salvation from incoming fire, warriors hurl themselves into whatever cover they can find.\nWHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One Infantry unit from your army that was selected as the target of one or more of the attacking unit's attacks.\nEFFECT: Until the end of the phase, all models in your unit have a 6+ invulnerable save and have the Benefit of Cover (pg 44).\n\n[CP cost: 1CP]",
+      "[page 42, stratagem] CORE - STRATEGIC PLOY STRATAGEM\nA hail of wildfire can drive back advancing foes.\nWHEN: Your opponent's Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back or Charge move.\nTARGET: One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.\nEFFECT: Your unit can shoot that enemy unit as if it were your Shooting phase.\nRESTRICTIONS: Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon's Ballistic Skill or any modifiers. You can only use this Stratagem once per turn.\n\n[CP cost: 1CP]",
+      "[page 42, stratagem] CORE - WARGEAR STRATAGEM\nEven the most skilled marksmen struggle to hit targets veiled by billowing screens of smoke.\nWHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One Smoke unit from your army that was selected as the target of one or more of the attacking unit's attacks.\nEFFECT: Until the end of the phase, all models in your unit have the Benefit of Cover (pg 44) and the Stealth ability (pg 20).\n\n[CP cost: 1CP]",
+      "[page 41, stratagem] CORE - EPIC DEED STRATAGEM\nThe legends of the 41st Millennium are replete with deadly duels between mighty champions.\nWHEN: Fight phase, when a Character unit from your army that is within Engagement Range of one or more Attached units is selected to fight.\nTARGET: One Character model in your unit.\nEFFECT: Until the end of the phase, all melee attacks made by that model have the [PRECISION] ability (pg 26).\n\n[CP cost: 1CP]",
+      "[page 18, prose] 8\"\n\n3\"\n\n3\"\n\n日\n\n1\n\n2\n\n4\n\n5\n\n19\n\nQ\n\nSHOOTING PHASE\n\nGuns thunder and shrapnel flies through the air. Bursts of muzzle flare and beams of las-fire illuminate the fog of war, and spent ammunition cartridges litter the battlefield.\n\nUse the following sequence when a unit shoots.\n\n1\n\nSELECT ELIGIBLE UNIT\n\n2\n\nSELECT TARGETS\n\n3\n\nMAKE RANGED ATTACKS\n\n4\n\nREPEAT FOR NEXT ELIGIBLE UNIT\n\nIn your Shooting phase, if you have one or more eligible units from your army on the battlefield, you can select those units, one at a time, and shoot with them. Each unit can only be selected to shoot once per phase. Once all of the units you selected have shot, progress to your Charge phase.\n\nA unit is eligible to shoot unless any of the following apply:\n\n■ That unit Advanced this turn.\n\n■  That unit Fell Back this turn.\n\nSELECT TARGETS"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "Fire Overwatch stratagem cost effect",
+            "Fire Overwatch stratagem CP cost when can you use",
+            "Fire Overwatch"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "type": "rules_multi_chunk",
+    "question": "Can a unit shoot in the turn it Advanced?",
+    "ground_truth": "Generally no: units that Advance cannot shoot or charge this turn. The exception is a unit containing models with Assault weapons: it is still eligible to shoot in that Shooting phase, but can only resolve attacks with its Assault weapons.",
+    "answer": "Generally, **no**. According to the Core Rules:\n\n* A unit cannot shoot or declare a charge in the same turn that it Advanced (pages 13 and 14).\n* In the Shooting phase, a unit is not eligible to shoot if it Advanced this turn (page 18).\n\n*(Note: Unless a specific rule or weapon ability allows otherwise, this general restriction applies.)*",
+    "contexts": [
+      "[page 13, prose] 1\n\nMOVE UNITS\n\n2\n\nREINFORCEMENTS\n\nADVANCE MOVES\n\nWhen a unit Advances, make an Advance roll for that unit by rolling one D6. Add the result in inches to the Move characteristic of each model in that unit until the end of the phase. Each model in that unit can then make an Advance move by moving a distance in inches less than or equal to this total, but no model can be moved within Engagement Range of enemy models. A unit cannot shoot or declare a charge in the same turn that it Advanced.\n\n■ Advance Move: Models move up to M+D6\".\n\n■  Cannot move within Engagement Range of any enemy models.\n\n■  Units that Advance cannot shoot or charge this turn.\n\nFALL BACK MOVES",
+      "[page 42, stratagem] CORE - STRATEGIC PLOY STRATAGEM\nA hail of wildfire can drive back advancing foes.\nWHEN: Your opponent's Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back or Charge move.\nTARGET: One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.\nEFFECT: Your unit can shoot that enemy unit as if it were your Shooting phase.\nRESTRICTIONS: Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon's Ballistic Skill or any modifiers. You can only use this Stratagem once per turn.\n\n[CP cost: 1CP]",
+      "[page 14, prose] ■  Units that Advance cannot shoot or charge this turn.\n\nFALL BACK MOVES\n\nWhen a unit Falls Back, each model in that unit can make a Fall Back move by moving a distance in inches less than or equal to its Move characteristic, and when doing so you can move it within Engagement Range of enemy models, provided it does not end that move within Engagement Range of any enemy models - if this is not possible, that unit cannot Fall Back.\n\nA unit cannot shoot or declare a charge in the same turn that it Fell Back.\n\nDesperate Escape Tests",
+      "[page 18, prose] 8\"\n\n3\"\n\n3\"\n\n日\n\n1\n\n2\n\n4\n\n5\n\n19\n\nQ\n\nSHOOTING PHASE\n\nGuns thunder and shrapnel flies through the air. Bursts of muzzle flare and beams of las-fire illuminate the fog of war, and spent ammunition cartridges litter the battlefield.\n\nUse the following sequence when a unit shoots.\n\n1\n\nSELECT ELIGIBLE UNIT\n\n2\n\nSELECT TARGETS\n\n3\n\nMAKE RANGED ATTACKS\n\n4\n\nREPEAT FOR NEXT ELIGIBLE UNIT\n\nIn your Shooting phase, if you have one or more eligible units from your army on the battlefield, you can select those units, one at a time, and shoot with them. Each unit can only be selected to shoot once per phase. Once all of the units you selected have shot, progress to your Charge phase.\n\nA unit is eligible to shoot unless any of the following apply:\n\n■ That unit Advanced this turn.\n\n■  That unit Fell Back this turn.\n\nSELECT TARGETS",
+      "[page 20, prose] You can select an enemy Monster or Vehicle unit within Engagement Range of one or more units from your army as a target of ranged weapons. Each time a model from your army makes a ranged attack against such a target, unless that attack is made with a Pistol, subtract 1 from that attack's Hit roll.\n\nDesigner's Note: A unit that is within Engagement Range of an enemy Monster or Vehicle unit is still not eligible to shoot, and so cannot make ranged attacks against that Monster or Vehicle unit (unless that unit is eligible to shoot even while within Engagement Range of enemy units, e.g. it is itself a Monster or Vehicle unit, or its models are equipped with Pistols). Other units from your army that are eligible to shoot can, however, target and shoot that enemy Monster or Vehicle unit."
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "unit shoot after advance advance move",
+            "advance shooting phase eligible to shoot",
+            "advanced can it shoot assault"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "type": "rules_text",
+    "question": "What are the effects of a unit being Battle-shocked?",
+    "ground_truth": "The Objective Control characteristic of all its models is 0. If it Falls Back, a Desperate Escape test must be taken for every model in the unit. Its controlling player cannot use Stratagems to affect it. It stays Battle-shocked until the start of its controller's next Command phase.",
+    "answer": "According to the Core Rules (page 11), while a unit is **Battle-shocked** (which lasts until the start of its controlling player's next Command phase):\n\n* **Objective Control:** The Objective Control (OC) characteristic of all models in the unit is **0**.\n* **Stratagems:** Its controlling player **cannot use Stratagems** to affect that unit.\n* **Falling Back:** If the unit Falls Back, you must take a **Desperate Escape test** for every model in that unit.",
+    "contexts": [
+      "[page 11, prose] ■ Its controlling player cannot use Stratagems to affect that unit.\n\nOnce you have taken Battle-shock tests for all of your units that require them, your Command phase ends and you progress to your Movement phase.\n\n■  Take a Battle-shock test for each unit from your army on the battlefield that is Below Half-strength.\n\n■  Roll 2D6: if the result is greater than or equal to the unit's Leadership, the test is passed. Otherwise, the unit is Battle-shocked until the start of your next Command phase.\n\n■  Battle-shocked units have an OC of 0 and their controlling player cannot use Stratagems to affect them.\n\n■  Battle-shocked units must take Desperate Escape tests if they Fall Back.",
+      "[page 11, prose] Then, if you have any other rules that need to be resolved in the Command phase, you do so now before progressing to the Battle-shock step.\n\n■  Both players gain 1CP .\n\n■  Resolve any other rules that occur in the Command phase.\n\n2. BATTLE-SHOCK\n\nIn this step, you must take a Battle-shock test for each of your units on the battlefield that is Below Half-strength (pg 12). To do so, roll 2D6: if the result is greater than or equal to the best Leadership characteristic in that unit, the test is passed; otherwise, the test is failed and, until the start of your next Command phase, that unit is Battle-shocked.\n\nWhile a unit is Battle-shocked:\n\n■  The Objective Control characteristic of all of its models is 0.\n\n■  If it Falls Back, you must take a Desperate Escape test for every model in that unit (pg 14).\n\n■ Its controlling player cannot use Stratagems to affect that unit.",
+      "[page 42, stratagem] CORE - EPIC DEED STRATAGEM\nIndifferent to their own survival, these warriors hold their ground against seemingly impossible odds.\nWHEN: Battle-shock step of your Command phase, just after you have failed a Battle-shock test taken for a unit from your army (pg 11).\nTARGET: The unit from your army that Battle-shock test was just taken for (even though your Battle-shocked units cannot normally be affected by your Stratagems).\nEFFECT: Your unit is treated as having passed that test instead, and is not Battle-shocked as a result.\n\n[CP cost: 1CP]",
+      "[page 11, prose] ■  Battle-shocked units must take Desperate Escape tests if they Fall Back.\n\nYour Command phase is split into two steps. In the first, both players gain 1 Command point (CP) and you resolve any other Command phase rules; in the second, you test to see if any of your units are Battle-shocked.\n\n1\n\nCOMMAND\n\n2\n\nBATTLE-SHOCK\n\nGAINING COMMAND POINTS\n\nOutside of the CP players gain at the start of the Command phase, each player can only gain a total of 1CP per battle round, regardless of the source.\n\nCORE RULES | COMMAND PHASE\n\nSTARTING STRENGTH\n\nThe number of models a unit contains when it is added to your army is known as its Starting Strength.\n\nBELOW HALF-STRENGTH\n\nSome rules will refer to a unit being Below Half-strength.",
+      "[page 18, prose] ■  If a Transport is destroyed, any embarked units must disembark.\n\n■  Roll one D6 for each model that disembarks: for each 1, that model's unit suffers 1 mortal wound.\n\n■  Until the start of its controlling player's next Command phase, the disembarking unit is Battle-shocked.\n\n■  Until the end of the turn, the disembarking unit counts as having made a Normal move, and cannot declare a charge.\n\nEmergency Disembarkation"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "effects of Battle-shocked unit",
+            "Battle-shocked units effects OC stratagems",
+            "Battle-shock rules"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "type": "rules_text",
+    "question": "How many Command points do players gain in the Command phase, and can they gain more elsewhere?",
+    "ground_truth": "Both players gain 1 CP in the Command phase. Outside of the CP gained at the start of the Command phase, each player can only gain a total of 1 CP per battle round, regardless of the source.",
+    "answer": "In the Command phase:\n* **Command Phase Gain:** At the start of the Command phase, before doing anything else, **both players gain 1 Command Point (1CP)** (Core Rules, pages 10 and 11).\n\nRegarding gaining more CP elsewhere:\n* **Gaining Extra CP:** Outside of the 1CP that players gain at the start of the Command phase, each player can only gain a maximum total of **1 extra CP per battle round**, regardless of the source of the rule granting it (Core Rules, page 11).",
+    "contexts": [
+      "[page 11, prose] ■  Battle-shocked units must take Desperate Escape tests if they Fall Back.\n\nYour Command phase is split into two steps. In the first, both players gain 1 Command point (CP) and you resolve any other Command phase rules; in the second, you test to see if any of your units are Battle-shocked.\n\n1\n\nCOMMAND\n\n2\n\nBATTLE-SHOCK\n\nGAINING COMMAND POINTS\n\nOutside of the CP players gain at the start of the Command phase, each player can only gain a total of 1CP per battle round, regardless of the source.\n\nCORE RULES | COMMAND PHASE\n\nSTARTING STRENGTH\n\nThe number of models a unit contains when it is added to your army is known as its Starting Strength.\n\nBELOW HALF-STRENGTH\n\nSome rules will refer to a unit being Below Half-strength.",
+      "[page 10, prose] FIGHT PHASE\n\nBoth players' units pile in and attack with melee weapons.\n\nOnce a player's turn has ended, their opponent then starts their turn. Once both players have completed a turn, the battle round has been completed and the next one begins, and so on, until the battle ends.\n\nL\n\n10\n\n2\n\n3\n\n4\n\n5\n\n11\n\nCOMMAND PHASE\n\nCommanders gauge the flow of the battle, consolidating their objectives before making alterations to their battle plans and devising new tactics and strategies with which to defeat the foe.\n\n1. COMMAND\n\nAt the start of your Command phase, before doing anything else, both players gain 1CP . Command points are a strategic resource that you can spend during the battle to use Stratagems. You can find out more about Stratagems on pages 41-42.",
+      "[page 11, prose] Then, if you have any other rules that need to be resolved in the Command phase, you do so now before progressing to the Battle-shock step.\n\n■  Both players gain 1CP .\n\n■  Resolve any other rules that occur in the Command phase.\n\n2. BATTLE-SHOCK\n\nIn this step, you must take a Battle-shock test for each of your units on the battlefield that is Below Half-strength (pg 12). To do so, roll 2D6: if the result is greater than or equal to the best Leadership characteristic in that unit, the test is passed; otherwise, the test is failed and, until the start of your next Command phase, that unit is Battle-shocked.\n\nWhile a unit is Battle-shocked:\n\n■  The Objective Control characteristic of all of its models is 0.\n\n■  If it Falls Back, you must take a Desperate Escape test for every model in that unit (pg 14).\n\n■ Its controlling player cannot use Stratagems to affect that unit.",
+      "[page 59, prose] 2\n\nMISSION OBJECTIVES\n\nCAPTURE AND CONTROL\n\nProgressive Objective\n\nStarting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores 1 Victory point (VP) for each objective marker they control (to a maximum of 3VP per turn). Details of how to control objective markers can be found on page 58.\n\n3\n\nCREATE THE BATTLEFIELD\n\nPlayers now create the battlefield and set up terrain features using the guidelines on pages 49-52. The minimum size of your battlefield depends on the battle size you have selected, as shown in the table below.\n\nPlayers must then alternate setting up objective markers on the battlefield, starting with whichever player wins a roll-off, until a total of four have been placed. Objective markers cannot be placed within 6\" of any battlefield edge, or within 9\" of any other objective markers.\n\n4",
+      "[page 43, prose] The combined points value of all the units you wish to place into Strategic Reserves before the battle (including those embarked within Transport models that are themselves placed into Strategic Reserves) cannot exceed 25% of your total points limit for your chosen battle size, as shown in the table below.\n\n■  Strategic Reserves: Units that are not deployed at the start of the battle.\n\n■  Combined points value cannot exceed 25% of your army's total.\n\n■  Cannot put Fortifications into Strategic Reserves.\n\nARRIVING FROM STRATEGIC RESERVES\n\nUnits that are placed into Strategic Reserves are called Strategic Reserves units, and can arrive later in the battle during the Reinforcements step of any of your Movement phases except during the first battle round.\n\n Any Strategic Reserves units that are not on the battlefield at the end of the battle count as destroyed."
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "Command phase gain Command points CP",
+            "gaining extra Command points CP limit per battle round",
+            "Command points gain battle round max"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "type": "rules_scoring",
+    "question": "How are Victory points scored in the Capture and Control mission?",
+    "ground_truth": "It is a Progressive Objective. Starting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores 1 Victory point for each objective marker they control, to a maximum of 3 VP per turn.",
+    "answer": "In the **Capture and Control** mission, Victory points (VP) are scored as follows:\n\n* **Timing & Scoring:** Starting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores **1 VP for each objective marker they control**, up to a maximum of **3 VP per turn** (Page 59).\n\n### How Control is Determined\nTo score VP from an objective marker, a player must control it:\n* **Range:** A model is within range of an objective marker if it is within 3\" horizontally and 5\" vertically (Page 58).\n* **Level of Control:** Add together the Objective Control (OC) characteristics of all models from your army within range of that marker.\n* **Control:** A player controls an objective marker at the end of any phase if their total Level of Control is greater than their opponent's. If both players have the same Level of Control, the objective marker is contested and controlled by neither player (Page 58).",
+    "contexts": [
+      "[page 58, prose] At the start of the battle, each objective marker on the battlefield is said to be contested, and so is not controlled by either player. To control an objective marker, a player will first need to move models within range of it. A model is within range of an objective marker if it is within 3\" horizontally and 5\" vertically of that objective marker.\n\nEvery model has an Objective Control (OC) characteristic listed on its datasheet. To determine a player's Level of Control over an objective marker, add together the OC characteristics of all the models from that player's army that are within range of that objective marker. A player will control an objective marker at the end of any phase if their Level of Control over it is greater than their opponent's. If both players have the same Level of Control over an objective marker, that objective marker is contested.",
+      "[page 58, prose] ■  A model is within range of an objective marker if within 3\" horizontally and 5\" vertically.\n\n■  Level of Control: Add together the OC characteristics of all of a player's models within range of the objective marker.\n\n■  An objective marker is controlled by the player with the highest Level of Control over it (in a tie, it is contested).\n\n■ Models cannot end a move on top of an objective marker.\n\nMISSION MAP KEY\n\nAttacker's Deployment Zone The Attacker must set up their army within this area.\n\nHints and Tips OBJECTIVE MARKERS AND TERRAIN FEATURES",
+      "[page 59, prose] 2\n\nMISSION OBJECTIVES\n\nCAPTURE AND CONTROL\n\nProgressive Objective\n\nStarting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores 1 Victory point (VP) for each objective marker they control (to a maximum of 3VP per turn). Details of how to control objective markers can be found on page 58.\n\n3\n\nCREATE THE BATTLEFIELD\n\nPlayers now create the battlefield and set up terrain features using the guidelines on pages 49-52. The minimum size of your battlefield depends on the battle size you have selected, as shown in the table below.\n\nPlayers must then alternate setting up objective markers on the battlefield, starting with whichever player wins a roll-off, until a total of four have been placed. Objective markers cannot be placed within 6\" of any battlefield edge, or within 9\" of any other objective markers.\n\n4",
+      "[page 38, prose] Save (Sv): This indicates the protection a model's armour gives them.\n\nWounds (W): Wounds represent how much damage a model can sustain before it succumbs to its injuries. If a model's Wounds characteristic is reduced to 0, that model is destroyed.\n\nLeadership (Ld): This reveals how courageous, determined or self-controlled a model is. The lower this number, the better a model's Leadership is.\n\nObjective Control (OC): This shows how effectively a model can exert control over an objective on the battlefield.\n\n3\n\nABILITIES\n\nMany units have special abilities and rules that may apply during the game, from Core Rules shared by many units to bespoke Psychic abilities and invulnerable saves. These will be described here, along with any rules that apply when larger models such as vehicles have suffered sufficient damage.",
+      "[page 58, prose] Attacker's Battlefield Edge Defender's Battlefield Edge Centre of Battlefield\n\n58\n\nC\n\nMISSION\n\n59\n\nONLY WAR\n\nThe time has come to prove your worth as the greatest commander in the galaxy! All that stands between you and ultimate glory is an opposing force bent upon your destruction. Destroy the enemy army and secure strategic sites littered across the battlefield while stopping your foe from doing likewise.\n\n1\n\nMUSTER ARMIES\n\nFirst, players will need to muster armies based on the battle size they have selected, as described on pages 55-56. This mission is designed for Incursion, Strike Force and Onslaught battle sizes.\n\n2\n\nMISSION OBJECTIVES\n\nCAPTURE AND CONTROL\n\nProgressive Objective"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "Capture and Control",
+            "Capture and Control victory points",
+            "Capture and Control objective points"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "type": "sql",
+    "question": "What is the toughness of an Intercessor Squad?",
+    "ground_truth": "The toughness of an Intercessor Squad is 4.",
+    "answer": "According to the unit database, an **Intercessor Squad** (Space Marines) has a **Toughness of 4**. \n\nFor context with related variants:\n* **Intercessor Squad**: Toughness 4\n* **Assault Intercessor Squad**: Toughness 4\n* **Heavy Intercessor Squad**: Toughness 6 (differs from the standard squad)",
+    "contexts": [
+      "SQL: SELECT \n    d.name AS datasheet_name,\n    f.name AS faction_name,\n    dm.name AS model_name,\n    dm.t AS toughness\nFROM datasheets d\nJOIN datasheets_models dm ON d.Id = dm.DatasheetId\nLEFT JOIN factions f ON d.factionId = f.Id\nWHERE d.name LIKE '%Intercessor Squad%';\nColumns: ['datasheet_name', 'faction_name', 'model_name', 'toughness']\nRows:\n('Intercessor Squad', 'Space Marines', 'Intercessor Squad', '4')\n('Heavy Intercessor Squad', 'Space Marines', 'Heavy Intercessor Squad', '6')\n('Assault Intercessor Squad', 'Space Marines', 'Assault Intercessor Squad', '4')"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_unit_data",
+        "args": {
+          "question": "What is the Toughness of Intercessor Squad units in Space Marines or other factions?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "type": "sql",
+    "question": "How many points does a 10-model Intercessor Squad cost?",
+    "ground_truth": "A 10-model Intercessor Squad costs 150 points (a 5-model squad costs 80 points).",
+    "answer": "A 10-model Intercessor Squad costs **150 points** (according to the unit database).",
+    "contexts": [
+      "SQL: SELECT dmc.description, dmc.cost\nFROM datasheets d\nJOIN datasheets_models_cost dmc ON d.Id = dmc.DatasheetId\nWHERE d.name = 'Intercessor Squad' AND dmc.description LIKE '%10%';\nColumns: ['description', 'cost']\nRows:\n('10 models', '150')\n('10 models', '150')\n('10 models', '150')",
+      "SQL: SELECT\n  dmc.description,\n  dmc.cost\nFROM datasheets_models_cost dmc\nJOIN datasheets d ON d.Id = dmc.DatasheetId\nWHERE d.name = 'Intercessor Squad';\nColumns: ['description', 'cost']\nRows:\n('10 models', '150')\n('10 models', '150')\n('10 models', '150')\n('5 models', '80')\n('5 models', '80')\n('5 models', '80')\n('YOUR UNIT COSTS', '')\n('YOUR UNIT COSTS', '')\n('YOUR UNIT COSTS', '')"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_unit_data",
+        "args": {
+          "question": "How many points does an Intercessor Squad cost for 10 models?"
+        }
+      },
+      {
+        "name": "retrieve_unit_data",
+        "args": {
+          "question": "SELECT description, cost FROM datasheets_models_cost JOIN datasheets ON datasheets.Id = datasheets_models_cost.DatasheetId WHERE datasheets.name = 'Intercessor Squad';"
+        }
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "type": "hybrid",
+    "question": "What D6 roll does a Strength 8 weapon need to wound an Intercessor Squad?",
+    "ground_truth": "An Intercessor Squad has Toughness 4. Strength 8 is twice the Toughness, so the weapon wounds on a 2+.",
+    "answer": "An Intercessor Squad model has a **Toughness of 4** (retrieved from the unit datasheet database). \n\nComparing the attack's **Strength of 8** to the target's **Toughness of 4**:\n* The Strength is twice the Toughness ($8 \\ge 2 \\times 4$).\n\nAccording to the Core Rules (page 21), when an attack's Strength is twice (or more than twice) the target's Toughness, the required D6 roll to successfully wound is a **2+**.",
+    "contexts": [
+      "SQL: SELECT d.name AS unit_name, dm.name AS model_name, dm.t AS toughness\nFROM datasheets d\nJOIN datasheets_models dm ON d.Id = dm.DatasheetId\nJOIN factions f ON d.factionId = f.Id\nWHERE d.name = 'Intercessor Squad'\n  AND (f.name LIKE '%Space Marines%' OR f.name LIKE '%Adeptus Astartes%');\nColumns: ['unit_name', 'model_name', 'toughness']\nRows:\n('Intercessor Squad', 'Intercessor Squad', '4')",
+      "[page 21, table] WOUND ROLL ATTACK'S STRENGTH VS TARGET'S TOUGHNESS | D6 RESULT REQUIRED\nStrength is TWICE (or more than twice) the Toughness. | 2+\nStrength is GREATER than the Toughness. | 3+\nStrength is EQUAL to the Toughness. | 4+\nStrength is LESS than the Toughness. | 5+\nStrength is HALF (or less than half) the Toughness. | 6+",
+      "[page 21, prose] ■  Hit Roll (Ranged Attack): A hit is scored if the D6 result equals or exceeds that attack's BS.\n\n■  Hit Roll (Melee Attack): A hit is scored if the D6 result equals or exceeds that attack's WS.\n\n Critical Hit: Unmodified Hit roll of 6. Always successful.\n\n■  A Hit roll can never be modified by more than -1 or +1.\n\n■ ■ An unmodified Hit roll of 1 always fails.\n\n2. WOUND ROLL\n\nEach time an attack scores a hit against a target unit, make a Wound roll for that attack by rolling one D6 to see if that attack successfully wounds the target unit. The result required is determined by comparing the attack's Strength (S) characteristic with the target's Toughness (T) characteristic, as shown below.",
+      "[page 24, prose] 1\n\n A unit of 20 Termagants targets a Terminators unit with their Fleshborers. As these weapons all have the same profile, the controlling player chooses to use the fast dice rolling method.\n\n2\n\n3\n\n4\n\n5\n\n6\n\n Each has an Attacks characteristic of 1, so the controlling player rolls twenty D6. Seven of the results are greater than or equal to the Fleshborers' Ballistic Skill of 4+, so seven hits are scored, and seven Wound rolls are then made.\n\n The Strength characteristic of those attacks is 5, which is equal to the Toughness of a Terminator, so rolls of 4+ are required to successfully wound the target. Of those seven rolls, five successfully wound.",
+      "[page 22, prose] If the result of the Wound roll is greater than or equal to the required number shown in the table opposite, then that Wound roll is successful and scores one wound against the target unit. Otherwise, the attack fails and the attack sequence ends.\n\nAn unmodified Wound roll of 6 is called a Critical Wound and is always successful. An unmodified Wound roll of 1 always fails. A Wound roll can never be modified by more than -1 or +1.\n\n■  Critical Wound: Unmodified Wound roll of 6. Always successful.\n\n■ An unmodified Wound roll of 1 always fails.\n\n■  A Wound roll can never be modified by more than -1 or +1.\n\n3. ALLOCATE ATTACK\n\nIf an attack successfully wounds the target unit, the player controlling the target unit allocates that attack to one model in the target unit, as follows.",
+      "[page 23, prose] FEEL NO PAIN\n\nSome warriors refuse to be laid low, even by what should be fatal wounds.\n\nSome models have 'Feel No Pain x +' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by ' x ' , that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound.\n\n■  Feel No Pain x +: Each time this model would lose a wound, roll one D6: if the result equals or exceeds ' x ' , that wound is not lost.\n\nDEADLY DEMISE\n\nFrom detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat."
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_unit_data",
+        "args": {
+          "question": "What is the Toughness (T) of an Intercessor Squad in Space Marines?"
+        }
+      },
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "wound roll strength vs toughness table",
+            "wound roll chart compare strength to toughness"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "type": "out_of_scope",
+    "question": "Which secondary objectives are available in the Leviathan mission pack?",
+    "ground_truth": "This cannot be answered from the available sources: the Core Rules and the unit database do not cover mission packs or secondary objectives. A faithful answer says so and does not invent any objectives.",
+    "answer": "The retrieved text contains only the Core Rules and does not include mission packs, secondary objective cards, or Crusade rules. Consequently, the available rules do not cover the Leviathan mission pack or its secondary objectives.",
+    "contexts": [
+      "[page 41, stratagem] CORE - STRATEGIC PLOY STRATAGEM\nIn close-quarters combat, the slightest hesitation can leave an opening for a swift foe to exploit.\nWHEN: Fight phase, just after an enemy unit has fought.\nTARGET: One unit from your army that is within Engagement Range of one or more enemy units and that has not already been selected to fight this phase.\nEFFECT: Your unit fights next.\n\n[CP cost: 2CP]",
+      "[page 58, prose] Attacker's Battlefield Edge Defender's Battlefield Edge Centre of Battlefield\n\n58\n\nC\n\nMISSION\n\n59\n\nONLY WAR\n\nThe time has come to prove your worth as the greatest commander in the galaxy! All that stands between you and ultimate glory is an opposing force bent upon your destruction. Destroy the enemy army and secure strategic sites littered across the battlefield while stopping your foe from doing likewise.\n\n1\n\nMUSTER ARMIES\n\nFirst, players will need to muster armies based on the battle size they have selected, as described on pages 55-56. This mission is designed for Incursion, Strike Force and Onslaught battle sizes.\n\n2\n\nMISSION OBJECTIVES\n\nCAPTURE AND CONTROL\n\nProgressive Objective",
+      "[page 56, prose] * Every Dedicated Transport unit from your army must start the battle with at least one unit embarked within it, or it cannot be deployed for that battle and will instead count as having been destroyed during the first battle round.\n\nSelect one Character model from your army to be your Warlord - this will be the leader of your army - and make a note of this on your Army Roster. Your Warlord gains the Warlord keyword.\n\n57\n\nMISSIONS\n\nBefore you can wage war in a game of Warhammer 40,000, you must first select a mission. The Core Rules include a single mission - Only War - that is ideal to get the action started quickly. Others can be found elsewhere in this or other books, or you could play a mission of your own creation. If you and your opponent can't agree which mission to play, you must roll off, and the winner decides.\n\n1\n\nMUSTER ARMIES",
+      "[page 42, stratagem] CORE - WARGEAR STRATAGEM\nPriming their hand-held projectiles, these warriors draw back and hurl death into the enemy's midst.\nWHEN: Your Shooting phase.\nTARGET: One Grenades unit from your army that is not within Engagement Range of any enemy units and has not been selected to shoot this phase.\nEFFECT: Select one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your Grenades unit. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.\n\n[CP cost: 1CP]",
+      "[page 59, prose] 2\n\nMISSION OBJECTIVES\n\nCAPTURE AND CONTROL\n\nProgressive Objective\n\nStarting from the second battle round, at the end of each player's Command phase, the player whose turn it is scores 1 Victory point (VP) for each objective marker they control (to a maximum of 3VP per turn). Details of how to control objective markers can be found on page 58.\n\n3\n\nCREATE THE BATTLEFIELD\n\nPlayers now create the battlefield and set up terrain features using the guidelines on pages 49-52. The minimum size of your battlefield depends on the battle size you have selected, as shown in the table below.\n\nPlayers must then alternate setting up objective markers on the battlefield, starting with whichever player wins a roll-off, until a total of four have been placed. Objective markers cannot be placed within 6\" of any battlefield edge, or within 9\" of any other objective markers.\n\n4"
+    ],
+    "tool_calls": [
+      {
+        "name": "retrieve_rules_text",
+        "args": {
+          "queries": [
+            "Leviathan mission pack secondary objectives",
+            "secondary objectives Leviathan"
+          ]
+        }
+      }
+    ]
+  }
+]

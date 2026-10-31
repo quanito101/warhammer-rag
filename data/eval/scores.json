@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q01",
+    "faithfulness": 0.6666666666666666,
+    "context_recall": 1.0,
+    "context_precision": 0.9999999999
+  },
+  {
+    "id": "q02",
+    "faithfulness": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.9999999999
+  },
+  {
+    "id": "q03",
+    "faithfulness": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.6791666666496875
+  },
+  {
+    "id": "q04",
+    "faithfulness": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.8124999999796875
+  },
+  {
+    "id": "q05",
+    "faithfulness": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.9999999999666667
+  },
+  {
+    "id": "q06",
+    "faithfulness": 0.8333333333333334,
+    "context_recall": 1.0,
+    "context_precision": 0.9999999999
+  },
+  {
+    "id": "q07",
+    "faithfulness": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.9999999999
+  },
+  {
+    "id": "q08",
+    "faithfulness": 1.0,
+    "context_recall": 0.5,
+    "context_precision": 0.99999999995
+  },
+  {
+    "id": "q09",
+    "faithfulness": 0.5,
+    "context_recall": 1.0,
+    "context_precision": 0.99999999995
+  },
+  {
+    "id": "q10",
+    "faithfulness": 1.0,
+    "context_recall": 0.5,
+    "context_precision": 0.3333333333
+  }
+]
