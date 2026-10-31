@@ -1,0 +1,43 @@
+[project]
+name = "project-rag"
+version = "0.1.0"
+description = "Retrieval-augmented question answering over the Warhammer 40,000 Core Rules (PDF) and a unit database (SQLite), with Gemini as the LLM."
+readme = "README.md"
+authors = [
+    { name = "HO Ngoc Le Quan", email = "quanhnl20@gmail.com" },
+    { name = "Pablo Gagliardi", email = "pabgagliardi@gmail.com" },
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chromadb>=1.5.9",
+    "datasets>=5.1.0",
+    "docling>=2.129.0",
+    "google-genai>=2.31.0",
+    "langchain-core>=1.6.4",
+    "langchain-google-genai>=4.4.0",
+    "langchain-text-splitters>=1.1.2",
+    "langgraph>=1.2.15",
+    "openai>=3.3.0",
+    "ragas>=0.4.3",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=6.1.0",
+]
+
+[project.scripts]
+project-rag = "project_rag.chatbot.chat:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.uv]
+override-dependencies = ["scikit-network; sys_platform == 'never'"]

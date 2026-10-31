@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local secrets and generated files
+.env
+router_output.txt
+data/processed/llm_cache.sqlite
+
+# Editor, OS and tool caches
+.DS_Store
+.pytest_cache/
+
+# Generated index, rebuilt automatically on first use
+data/processed/chroma_db/
+
+# Intermediate parser export, not needed at run time
+data/processed/core_rules_raw.md
