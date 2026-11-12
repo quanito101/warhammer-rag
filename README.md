@@ -4,6 +4,8 @@ A retrieval-augmented chatbot that answers questions about the Warhammer 40,000
 Core Rules (a 60-page PDF) and about unit statistics (a SQLite database). It uses
 Google AI Studio (Gemini) as its LLM.
 
+Evaluated with RAGAS (Gemini as judge) on 10 hand-written questions with reference answers: faithfulness 0.90, context recall 0.90, context precision 0.88. See [Results](#results).
+   
 Mini-project for the course taught by Florent Storme, M2 Computational Linguistics
 (NLP), Université Paris Cité.
 
